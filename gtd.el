@@ -232,11 +232,8 @@ from the current buffer, along with their subtrees."
     (kbd "w") #'gtd--org-agenda-toggle-waiting))
 
 (defun gtd/init (&optional dir)
-  "Set up the GTD workflow for the files under DIR.
+  "Set up the GTD workflow for the files under DIR."
 
-Sets `gtd/dir' to DIR when given, then installs the capture template,
-TODO keywords, refile targets and agenda format. Does not bind any
-keys; see the Commentary above."
   (if dir (setq gtd/dir dir))
   (gtd--set-capture-templates)
   (gtd--set-org-todo-keywords)
